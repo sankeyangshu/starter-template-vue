@@ -58,6 +58,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
+    "@iconify/vue": "^5.0.0",
     "@sankeyangshu/eslint-config": "^2.2.0",
     "@tailwindcss/vite": "^4.1.11",
     "@types/node": "^24.2.1",
