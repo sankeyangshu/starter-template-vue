@@ -1,5 +1,21 @@
-# Vue 3 + TypeScript + Vite
+<h1 align="center">✨starter-template-vue✨</h1>
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<p align="center">
+  <img src="https://img.shields.io/github/license/sankeyangshu/starter-template-vue?colorA=363a4f&colorB=8CB90E&style=for-the-badge" alt="license" />
+  <img src="https://img.shields.io/github/package-json/v/sankeyangshu/starter-template-vue?colorA=363a4f&colorB=f5a97f&style=for-the-badge" alt="version" />
+  <img src="https://img.shields.io/github/languages/top/sankeyangshu/starter-template-vue?colorA=363a4f&colorB=1278B9&style=for-the-badge" alt="languages" />
+  <img src="https://img.shields.io/github/repo-size/sankeyangshu/starter-template-vue?colorA=363a4f&colorB=1278B9&style=for-the-badge" alt="repo-size" />
+</p>
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+<h2 align="center">
+<sub>Starter template for Vue3 + Vite + TypeScript</sub>
+</h2>
+
+_description_
+
+> **Note**:
+> Replace `starter-template-vue`, `_description_` and `sankeyangshu` globally to use this template.
+
+## License
+
+[MIT](./LICENSE) License © 2025-PRESENT [sankeyangshu](https://github.com/sankeyangshu)
