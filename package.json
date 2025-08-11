@@ -1,0 +1,81 @@
+{
+  "name": "starter-template-vue",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.14.0",
+  "description": "Starter template for Vue",
+  "author": {
+    "name": "sankeyangshu",
+    "email": "sankeyangshu@gmail.com",
+    "url": "https://github.com/sankeyangshu"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/sankeyangshu/starter-template-vue#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sankeyangshu/starter-template-vue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sankeyangshu/starter-template-vue/issues"
+  },
+  "keywords": [
+    "vue",
+    "vite",
+    "template",
+    "typescript",
+    "vue-router",
+    "pinia",
+    "tailwindcss"
+  ],
+  "engines": {
+    "node": ">=20.11.0",
+    "pnpm": ">=8.15.4"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production",
+    "build:test": "vite build --mode test",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "test": "vitest",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit --skipLibCheck",
+    "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
+    "clean:lib": "rimraf node_modules",
+    "release": "bumpp",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "vue": "^3.5.18"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@sankeyangshu/eslint-config": "^2.2.0",
+    "@types/node": "^24.2.1",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.7.0",
+    "bumpp": "^10.2.2",
+    "eslint": "^9.33.0",
+    "eslint-plugin-vue": "^10.4.0",
+    "lint-staged": "^16.1.5",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "simple-git-hooks": "^2.13.1",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.0",
+    "vitest": "^3.2.4",
+    "vue-eslint-parser": "^10.2.0",
+    "vue-tsc": "^3.0.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "npx --no-install commitlint --edit $1"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
