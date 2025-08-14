@@ -88,7 +88,7 @@
     "vue-tsc": "^3.0.5"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged",
+    "pre-commit": "pnpm typecheck && pnpm lint-staged",
     "commit-msg": "npx --no-install commitlint --edit $1"
   },
   "lint-staged": {
