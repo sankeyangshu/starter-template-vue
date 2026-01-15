@@ -1,31 +1,26 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import { layouts, views } from './_generated/imports';
-import { routes } from './_generated/routes';
-import { transformToVueRoutes } from './_generated/transformer';
 import type { App } from 'vue';
-import type { Router } from 'vue-router';
-
-const { VITE_BASE_URL } = import.meta.env;
+import { createRouter, createWebHistory } from 'vue-router';
+import { handleHotUpdate, routes } from 'vue-router/auto-routes';
+import { createRouterGuard } from './guard';
 
 /**
  * 创建一个可以被 Vue 应用程序使用的路由实例
  */
 export const router = createRouter({
-  history: createWebHistory(VITE_BASE_URL),
-  routes: transformToVueRoutes(routes, layouts, views),
+  history: createWebHistory(),
+  routes,
 });
 
 /**
- * Router guard
- * @descCN 路由守卫
- * @param router - Router instance
+ * 热更新路由
  */
-function createRouterGuard(_router: Router) {}
+if (import.meta.hot) {
+  handleHotUpdate(router);
+}
 
 /**
- * Setup Vue Router
- * @descCN 配置路由器
- * @param app Vue Element
+ * 配置路由器
+ * @param app vue实例
  */
 export async function setupRouter(app: App<Element>) {
   app.use(router);
