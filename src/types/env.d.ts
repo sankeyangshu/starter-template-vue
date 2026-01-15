@@ -10,11 +10,6 @@ declare namespace Env {
    */
   interface ImportMeta extends ImportMetaEnv {
     /**
-     * The homepage of the application
-     * @descCN 应用首页
-     */
-    readonly VITE_APP_HOMEPAGE: string;
-    /**
      * The title of the application
      * @descCN 应用标题
      */
@@ -32,11 +27,6 @@ declare namespace Env {
     /**
      * The prefix of the local icon
      * @descCN 本地图标前缀
-     */
-    readonly VITE_ICON_LOCAL_PREFIX: 'icon-local';
-    /**
-     * The prefix of the iconify icon
-     * @descCN iconify 图标前缀
      */
     readonly VITE_ICON_PREFIX: 'icon';
     /**
@@ -75,9 +65,25 @@ declare namespace Env {
      * @see {@link https://docs.iconify.design/api/providers.html}
      */
     readonly VITE_ICONIFY_URL?: string;
+    /**
+     * Used to differentiate storage across different domains
+     * @descCN 用于区分不同域的存储
+     */
+    readonly VITE_STORAGE_PREFIX?: string;
+    /**
+     * Whether to automatically detect application updates
+     * @descCN 是否自动检测应用更新
+     */
+    readonly VITE_AUTOMATICALLY_DETECT_UPDATE: boolean;
   }
 }
 
 interface ImportMeta {
   readonly env: Env.ImportMeta;
 }
+
+/**
+ * Build time of the project
+ * @descCN 项目构建时间
+ */
+declare const BUILD_TIME: string;
