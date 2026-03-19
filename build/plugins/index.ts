@@ -3,10 +3,9 @@ import Tailwindcss from '@tailwindcss/vite';
 import Vue from '@vitejs/plugin-vue';
 import { VantResolver } from 'unplugin-vue-components/resolvers';
 import Components from 'unplugin-vue-components/vite';
-import VueRouter from 'unplugin-vue-router/vite';
 import ViteRestart from 'vite-plugin-restart';
 import VueDevtools from 'vite-plugin-vue-devtools';
-import TsconfigPaths from 'vite-tsconfig-paths';
+import VueRouter from 'vue-router/vite';
 import { setupHtmlPluginConfig } from './html';
 import { setupUnPluginSvgIconConfig } from './unplugin';
 /**
@@ -19,14 +18,12 @@ export function createVitePlugins(viteEnv: Env.ImportMeta, lastBuildTime: string
   const vitePlugins: (PluginOption | PluginOption[])[] = [
     VueRouter({
       exclude: ['**/components/**/*.*'],
-      dts: 'src/types/typed-router.d.ts',
+      dts: 'src/types/route-map.d.ts',
     }),
 
     Vue(),
 
     Tailwindcss(),
-
-    TsconfigPaths(),
 
     Components({
       dts: 'src/types/components.d.ts',
