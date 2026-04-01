@@ -23,9 +23,9 @@
           class="animate-in duration-320 ease-in fade-in slide-in-from-bottom-[120px]"
           style="animation-delay: 150ms; animation-fill-mode: both;"
         >
-          <van-button type="primary" @click="$router.push('/')">
+          <button @click="$router.push('/')">
             {{ $t('system.goHome') }}
-          </van-button>
+          </button>
         </div>
       </div>
     </div>
